@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +8,125 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  word-break: break-word;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  padding: 20px 0;
+  list-style: none;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 32%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.price {
+  color: darkorange;
+}
+
+.category {
+  color: green
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  padding: 20px 0 ;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.tab-nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tab-nav button.active,
+.tab-nav button:hover {
+  color: darkorange;
+}
+
+.form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.form div {
+  margin-bottom: 15px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+} 
+
+.form button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form button:not(:last-child) {
+  margin-right: 20px;
+}
+
+.form button.submit-button {
+  background-color: darkorange;
+  color: white;
+}
+
+.form button.cancel-button {
+  background-color: #ccc;
+  color: #333;
 }
